@@ -2,10 +2,12 @@
   "name": "nextjs-fastapi",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@9.12.3",
   "scripts": {
     "fastapi-dev": "pip3 install -r requirements.txt && python3 -m uvicorn api.index:app --reload",
     "next-dev": "next dev",
-    "dev": "concurrently \"pnpm run next-dev\" \"pnpm run fastapi-dev\""
+    "dev": "concurrently \"pnpm run next-dev\" \"pnpm run fastapi-dev\"",
+    "build": "next build"
   },
   "dependencies": {
     "concurrently": "^9.0.1",
